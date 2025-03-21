@@ -2,6 +2,7 @@ import { AssistantCloudAPI, AssistantCloudConfig } from "./AssistantCloudAPI";
 import { AssistantCloudAuthTokens } from "./AssistantCloudAuthTokens";
 import { AssistantCloudRuns } from "./AssistantCloudRuns";
 import { AssistantCloudThreads } from "./AssistantCloudThreads";
+import { auiV0Decode, auiV0Encode } from "./auiV0";
 
 export class AssistantCloud {
   public readonly threads;
