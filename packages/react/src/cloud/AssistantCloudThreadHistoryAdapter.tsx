@@ -16,6 +16,7 @@ class AssistantCloudThreadHistoryAdapter implements ThreadHistoryAdapter {
   async append({ parentId, message }: ExportedMessageRepositoryItem) {
     const { remoteId } = await this.threadListItemRuntime.initialize();
     const cloud = this.cloudRef.current;
+    if (!cloud) throw new Error('Cloud reference is not initialized');
     
     const task = cloud.threads.messages
       .create(remoteId, {
